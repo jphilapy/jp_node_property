@@ -1,4 +1,5 @@
 const express = require('express')
+const Property = require('../models/property')
 const auth = require('../middleware/auth')
 const router = new express.Router()
 
@@ -8,8 +9,11 @@ const router = new express.Router()
 /** property stuff */
 
 // Property creation endpoint
-router.post('/properties', async (req, res) => {
-    const property = new Property(req.body)
+router.post('/properties', auth, async (req, res) => {
+    const property = new Property({ 
+        ...req.body,
+        owner: req.user._id
+    })
 
     try {
         await property.save()

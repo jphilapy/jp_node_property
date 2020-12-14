@@ -81,6 +81,7 @@ test('Should not delete account for unauthenticated user', async () => (
         .expect(401)
 ))
 
+/*
 test('Should upload avatar image', async () => {
     await request(app)
         .post('/users/me/avatar')
@@ -117,3 +118,5 @@ test('Should not update invalid user fields', async () => {
     })
     .expect(400)
 })
+
+*/

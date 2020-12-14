@@ -1,8 +1,11 @@
 const express = require('express')
-const Property = require('./properties')
+const auth = require('../middleware/auth')
 const router = new express.Router()
 
-/** TASKS */
+
+
+
+/** property stuff */
 
 // Property creation endpoint
 router.post('/properties', async (req, res) => {
@@ -26,7 +29,7 @@ router.get('/properties', async (req, res)=>{
     }
 })
 
-// get one task
+// get one property
 router.get('/properties/:id', async (req, res)=>{
     const _id = req.params.id
    
@@ -43,7 +46,7 @@ router.get('/properties/:id', async (req, res)=>{
     }
 })
 
-// video #98 Resource Updating Endpoints: Part 1
+
 router.patch('/properties/:id', async (req, res)=>{
     const updates = Object.keys(req.body)
     const allowedUpdates = ['description', 'completed']
@@ -66,7 +69,7 @@ router.patch('/properties/:id', async (req, res)=>{
 })
 
 
-// Video #98 Resource Deleting Endpoints
+
 router.delete('/properties/:id', async (req, res) => {
     try {
         const property = await Property.findByIdAndDelete(req.params.id)

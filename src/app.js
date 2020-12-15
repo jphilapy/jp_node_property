@@ -11,6 +11,7 @@ const userRouter = require('./routers/users')
 const taskRouter = require('./routers/tasks')
 const propertyRouter = require('./routers/properties')
 const basicRouter = require('./routers/basic')
+const configRouter = require('./routers/config')
 
 const publicDir = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -33,6 +34,7 @@ app.use(userRouter)
 app.use(taskRouter)
 app.use(propertyRouter)
 app.use(basicRouter)
+app.use(configRouter)
 
 
 module.exports = app

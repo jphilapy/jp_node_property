@@ -65,7 +65,9 @@
                     </tr>
                     //foreach($properties as $property)
 
-
+                    {{#each this}}
+                    <div class="row">{{this.name}}</div>
+                    {{/each}}
                     <tr align="center" bgcolor="#eeeeee" onmouseover="" onmouseout="">
                         <td class="style10">NOW</td>
                         <td class="style10">//property->address</td>
@@ -85,7 +87,9 @@
                                 //property->remarks</span></td>
                     </tr>
                     <tr>
-                        <td bgcolor="#EEEEEE" colspan="8"><span class="style10"><hr></span></td>
+                        <td bgcolor="#EEEEEE" colspan="8"><span class="style10">
+                                <hr>
+                            </span></td>
                     </tr>
                     //endforeach
                 </tbody>

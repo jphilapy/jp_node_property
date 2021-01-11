@@ -53,7 +53,7 @@ router.get('/request', (req, res) => {
 })
 
 router.get('/test', (req, res) => {
-    res.render('template', {
+    res.render('test', {
         title: 'Template',
         name: 'Jeff Philapy'
     })

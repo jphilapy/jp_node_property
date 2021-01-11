@@ -65,7 +65,9 @@
                     </tr>
                     {{#each properties}}
 
-
+                    {{#each this}}
+                    <div class="row">{{this.name}}</div>
+                    {{/each}}
                     <tr align="center" bgcolor="#eeeeee" onmouseover="" onmouseout="">
                         <td class="style10">{{this.availability}}</td>
                         <td class="style10">{{this.address}}</td>

@@ -20,14 +20,21 @@ router.get('/about', (req, res) => {
 router.get('/rentals', async (req, res) => {
 
     const properties = await Property.find({})
-    console.log('doing something')
-    console.log(properties)
-
 
     res.render('rentals', {
         title: 'About',
         name: 'Jeff Philapy',
         properties
+    })
+})
+router.get('/property/:_id', async (req, res) => {
+
+    const details = await Property.findById(req.params._id)
+
+    res.render('property', {
+        title: 'About',
+        name: 'Jeff Philapy',
+        property: details
     })
 })
 

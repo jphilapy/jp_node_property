@@ -65,9 +65,7 @@
                     </tr>
                     {{#each properties}}
 
-                    {{#each this}}
-                    <div class="row">{{this.name}}</div>
-                    {{/each}}
+
                     <tr align="center" bgcolor="#eeeeee" onmouseover="" onmouseout="">
                         <td class="style10">{{this.availability}}</td>
                         <td class="style10">{{this.address}}</td>
@@ -79,7 +77,7 @@
                         <td nowrap=""><a href="index.php?pg=request_prop&amp;pid=4" class="style10">Contact Us<br>
                                 regarding this property. </a>
                             <hr>
-                            <a href="//route('properties.show', $property->id)">View Properties</a>
+                            <a href="/property/{{this._id}}">View Propertie</a>
                         </td>
                     </tr>
                     <tr>

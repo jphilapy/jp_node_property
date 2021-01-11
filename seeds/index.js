@@ -1,9 +1,12 @@
+const path = require('path')
 const mongoose = require('mongoose')
+
+
 const Property = require('../src/models/property')
 const cities = require('./cities')
 const { places, descriptors } = require('./seedHelpers')
 
-mongoose.connect('mongodb://localhost:27017/property-management', {
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true

@@ -1,4 +1,5 @@
 const express = require('express')
+const Property = require('../models/property')
 const auth = require('../middleware/auth')
 const router = new express.Router()
 
@@ -16,10 +17,17 @@ router.get('/about', (req, res) => {
     })
 })
 
-router.get('/rentals', (req, res) => {
+router.get('/rentals', async (req, res) => {
+
+    const properties = await Property.find({})
+    console.log('doing something')
+    console.log(properties)
+
+
     res.render('rentals', {
         title: 'About',
-        name: 'Jeff Philapy'
+        name: 'Jeff Philapy',
+        properties
     })
 })
 

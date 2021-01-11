@@ -63,17 +63,17 @@
                         <td width="13%" class="tableFormat_topcenter">DEP</td>
                         <td width="13%" class="tableFormat_topright">&nbsp;</td>
                     </tr>
-                    //foreach($properties as $property)
+                    {{#each properties}}
 
 
                     <tr align="center" bgcolor="#eeeeee" onmouseover="" onmouseout="">
-                        <td class="style10">NOW</td>
-                        <td class="style10">//property->address</td>
-                        <td class="style10"> //property->city</td>
-                        <td class="style10">//property->bdrm</td>
-                        <td class="style10">//property->bath</td>
-                        <td class="style10"> //property->rent </td>
-                        <td class="style10"> //property->dep </td>
+                        <td class="style10">{{this.availability}}</td>
+                        <td class="style10">{{this.address}}</td>
+                        <td class="style10"> {{this.city}}</td>
+                        <td class="style10">{{this.bdrm}}</td>
+                        <td class="style10">{{this.bath}}</td>
+                        <td class="style10"> {{this.rent}} </td>
+                        <td class="style10"> {{this.deposit}} </td>
                         <td nowrap=""><a href="index.php?pg=request_prop&amp;pid=4" class="style10">Contact Us<br>
                                 regarding this property. </a>
                             <hr>
@@ -82,12 +82,15 @@
                     </tr>
                     <tr>
                         <td bgcolor="#FFFFFF" colspan="8"><span class="style7">REMARKS:</span> <span class="style10">
-                                //property->remarks</span></td>
+                                {{this.remarks}}</span></td>
                     </tr>
                     <tr>
-                        <td bgcolor="#EEEEEE" colspan="8"><span class="style10"><hr></span></td>
+                        <td bgcolor="#EEEEEE" colspan="8"><span class="style10">
+                                <hr>
+                            </span></td>
                     </tr>
-                    //endforeach
+
+                    {{/each}}
                 </tbody>
             </table>
 

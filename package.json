@@ -32,7 +32,7 @@
     "dev": "env-cmd ./config/dev.env nodemon -e js,hbs src/index.js",
     "live": "env-cmd ./config/live.env nodemon -e js,hbs src/index.js",
     "test": "env-cmd ./config/test.env jest --watch --runInBand",
-    "seed": "env-cmd ./config/live.env node seeds/index.js"
+    "seed": "env-cmd ./config/dev.env node seeds/index.js"
   },
   "jest": {
     "testEnvironment": "node"

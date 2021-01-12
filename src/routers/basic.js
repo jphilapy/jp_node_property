@@ -24,17 +24,18 @@ router.get('/rentals', async (req, res) => {
     const properties = await Property.find({}).lean()
 
     res.render('rentals', {
+        title: 'Rentals',
         layout: 'default',
         properties
     })
 })
 router.get('/property/:_id', async (req, res) => {
 
-    const details = await Property.findById(req.params._id)
+    const details = await Property.findById(req.params._id).lean()
 
     res.render('property', {
         layout: 'default',
-        title: 'About',
+        title: 'Rental',
         name: 'Jeff Philapy',
         property: details
     })
@@ -43,7 +44,7 @@ router.get('/property/:_id', async (req, res) => {
 router.get('/contact', (req, res) => {
     res.render('contact', {
         layout: 'default',
-        title: 'About',
+        title: 'Contact',
         name: 'Jeff Philapy'
     })
 })
@@ -51,7 +52,7 @@ router.get('/contact', (req, res) => {
 router.get('/request', (req, res) => {
     res.render('request', {
         layout: 'default',
-        title: 'About',
+        title: 'Request Info',
         name: 'Jeff Philapy'
     })
 })

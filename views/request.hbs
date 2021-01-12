@@ -5,155 +5,123 @@
         <div id="temporaryFormat">
             <br>
 
-            //if($errors->any())
-            <div class="alert alert-danger">
-                <ul class="list-group">
-                    //foreach($errors->all() as $error)
-                    <li class="list-group-item text-danger">
-                        // $error
-                    </li>
-                    //endforeach
-                </ul>
+            <div class="card">
+                <div class="card-body">
+                    //if($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="list-group">
+                            //foreach($errors->all() as $error)
+                            <li class="list-group-item text-danger">
+                                // $error
+                            </li>
+                            //endforeach
+                        </ul>
+                    </div>
+                    //endif
+                </div>
             </div>
-            //endif
+
+            <div class="card">
+                <div class="card-body">
+                    <strong>READ BEFORE CONTACTING US:</strong>
+
+                    <ul>
+                        <li>
+                            30$ cash applicant fee per
+                            applicant (covers
+                            credit check and processing)
+                        </li>
+                        <li>
+                            Copy of drivers license
+
+                        </li>
+                        <li>
+                            Last two pay stubs if
+                            employed
+                        </li>
+                        <li>
+                            If self-employed, we need the
+                            last two
+                            consecutive bank statements (summary page showing deposits).
+                        </li>
+                        <li>
+                            If prospective tenant had a
+                            bankruptcy we
+                            need it to be discharged.
+                        </li>
+                        <li>
+                            If military, copy of LES is
+                            required.
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <form method="post" name="request-info" action="email-request">
 
-                <table width="506" align="center">
-                    <tbody>
-                        <tr valign="baseline">
-                            <td colspan="2">
-                                <p>
-                                    <font size="4"><strong>
-                                            <font face="Arial, Helvetica, sans-serif">READ BEFORE CONTACTING US:</font>
-                                        </strong></font>
-                                </p>
-                                <ul>
-                                    <li>
-                                        <font size="2" face="Arial, Helvetica, sans-serif">30$ cash applicant fee per
-                                            applicant (covers
-                                            credit check and processing)</font>
-                                    </li>
-                                    <li>
-                                        <font size="2" face="Arial, Helvetica, sans-serif">Copy of drivers license
-                                        </font>
-                                    </li>
-                                    <li>
-                                        <font size="2" face="Arial, Helvetica, sans-serif">Last two pay stubs if
-                                            employed</font>
-                                    </li>
-                                    <li>
-                                        <font size="2" face="Arial, Helvetica, sans-serif">If self-employed, we need the
-                                            last two
-                                            consecutive bank statements (summary page showing deposits).</font>
-                                    </li>
-                                    <li>
-                                        <font size="2" face="Arial, Helvetica, sans-serif">If prospective tenant had a
-                                            bankruptcy we
-                                            need it to be discharged.</font>
-                                    </li>
-                                    <li>
-                                        <font size="2" face="Arial, Helvetica, sans-serif">If military, copy of LES is
-                                            required.</font>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td colspan="2">
-                                <p>
-                                    <font size="1" face="Verdana, Arial, Helvetica, sans-serif"><strong>If you are
-                                            requesting
-                                            information on a specific property, please visit our <a href="rentals">List
-                                                Of Current Rentals</a> and click "Contact Us about this property" next
-                                            to the property that
-                                            you wish to know more about.</strong></font>
-                                </p>
-                                <p><span class="style7">Required fields marked with</span> <span
-                                        class="notice1">*</span> </p>
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td width="236" align="right" nowrap=""><span class="notice1">*</span> <span
-                                    class="style10">Full
-                                    Name:</span></td>
-                            <td width="439"><input type="text" name="name" size="32" required></td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td nowrap="" align="right"><span class="notice1">*</span> <span class="style10">Email
-                                    Address:</span>
-                            </td>
-                            <td><input type="email" name="email" size="32" required></td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td align="right" nowrap="" class="style10">Phone #:</td>
-                            <td><input type="tel" name="phn_num" size="32"></td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td nowrap="" align="right"><span class="notice1">*</span> <span
-                                    class="style10">Subject:</span></td>
-                            <td><select name="subject" required>
-                                    <option value="">-- Select a Subject --</option>
-                                    <option value="General Information">General Information</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td align="right" nowrap="" class="style10">Type:</td>
-                            <td><select name="prop_type" id="prop_type">
-                                    <option value="">-- Select a Property Type --</option>
-                                    <option value="Apartment">Apartment</option>
-                                    <option value="Condo">Condo</option>
-                                    <option value="Duplex">Duplex</option>
-                                    <option value="House">House</option>
-                                    <option value="Mobile Home">Mobile Home</option>
-                                    <option value="Studio">Studio</option>
-                                    <option value="Townhouse">Townhouse</option>
-                                </select></td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td align="right" nowrap="" class="style10">Price Range: </td>
-                            <td><select name="price_range" id="price_range">
-                                    <option value="">-- Select a Price Range --</option>
-                                    <option value="$1200 to $1400">$1200 to $1400</option>
-                                    <option value="$1500 to $1800">$1500 to $1800</option>
-                                    <option value="$1800 to $2500">$1800 to $2500</option>
-                                    <option value="$2600+">$2600+</option>
-                                    <option value="$900 to $1200">$900 to $1200</option>
-                                </select></td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td align="right" nowrap="" class="style10">Estimated Move in Date: </td>
-                            <td><input name="moveindate" type="text" id="moveindate">
-                                <strong>
-                                    <font size="1" face="Verdana, Arial, Helvetica, sans-serif">Use
-                                        format MM/DD/YYYY
-                                    </font>
-                                </strong>
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td nowrap="" align="right" valign="top"><span class="notice1">*</span> <span
-                                    class="style10">Message:</span></td>
-                            <td><textarea name="message" cols="50" rows="5" required></textarea>
-                            </td>
-                        </tr>
-                        <tr valign="baseline">
-                            <td nowrap="" align="right">&nbsp;</td>
-                            <td><input type="submit" name="MM_insert" value="Send Request/Message">
-                                <input name="isSent" type="hidden" id="isSent" value="true">
-                                <input name="property_requested" type="hidden" id="property_requested" value="This person wants to know about the following property: 
-Vacancy Date: 
-Address of Vacancy: 
-City: 
-BR: 
-BA: 
-Rent: 0.00
-Deposit: 0.00
-">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <p>If you are
+                    requesting
+                    information on a specific property, please visit our <a href="rentals">List
+                        Of Current Rentals</a> and click "Contact Us about this property" next
+                    to the property that
+                    you wish to know more about.</p>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+
+                    <input type="text" class="form-control" name="name" id="name" size="32" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Email Address:</label>
+
+                    <input type="email" class="form-control" name="email" size="32" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Phone #:</label>
+                    <input type="tel" class="form-control" name="phn_num" size="32">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Subject:</label>
+                    <select class="form-control" name="subject" required>
+                        <option value="">-- Select a Subject --</option>
+                        <option value="General Information">General Information</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Type:</label>
+                    <select class="form-control" name="prop_type" id="prop_type">
+                        <option value="">-- Select a Property Type --</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Condo">Condo</option>
+                        <option value="Duplex">Duplex</option>
+                        <option value="House">House</option>
+                        <option value="Mobile Home">Mobile Home</option>
+                        <option value="Studio">Studio</option>
+                        <option value="Townhouse">Townhouse</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Price Range:</label>
+                    <select class="form-control" name="price_range" id="price_range">
+                        <option value="">-- Select a Price Range --</option>
+                        <option value="$1200 to $1400">$1200 to $1400</option>
+                        <option value="$1500 to $1800">$1500 to $1800</option>
+                        <option value="$1800 to $2500">$1800 to $2500</option>
+                        <option value="$2600+">$2600+</option>
+                        <option value="$900 to $1200">$900 to $1200</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Estimated Move in Date:</label>
+                    <input class="form-control" name="moveindate" class="form-control" type="text" id="moveindate">
+                </div>
+                <div class="form-group">
+                    <label for="">Message:</label>
+                    <textarea class="form-control" name="message" cols="50" rows="5" required></textarea>
+                </div>
+                <input type="submit" class="btn btn-success" name="MM_insert" value="Send Request/Message">
+
+
             </form>
         </div>
     </div>

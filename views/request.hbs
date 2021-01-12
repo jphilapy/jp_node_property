@@ -71,24 +71,24 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="">Email Address:</label>
+                    <label for="email">Email Address:</label>
 
-                    <input type="email" class="form-control" name="email" size="32" required>
+                    <input type="email" class="form-control" name="email" id="email" size="32" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Phone #:</label>
-                    <input type="tel" class="form-control" name="phn_num" size="32">
+                    <label for="phn_num">Phone #:</label>
+                    <input type="tel" class="form-control" name="phn_num" id="phn_num" size="32">
                 </div>
 
                 <div class="form-group">
-                    <label for="">Subject:</label>
-                    <select class="form-control" name="subject" required>
+                    <label for="subject">Subject:</label>
+                    <select class="form-control" name="subject" id="subject" required>
                         <option value="">-- Select a Subject --</option>
                         <option value="General Information">General Information</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="">Type:</label>
+                    <label for="prop_type">Type:</label>
                     <select class="form-control" name="prop_type" id="prop_type">
                         <option value="">-- Select a Property Type --</option>
                         <option value="Apartment">Apartment</option>
@@ -101,7 +101,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="">Price Range:</label>
+                    <label for="price_range">Price Range:</label>
                     <select class="form-control" name="price_range" id="price_range">
                         <option value="">-- Select a Price Range --</option>
                         <option value="$1200 to $1400">$1200 to $1400</option>
@@ -112,12 +112,12 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="">Estimated Move in Date:</label>
+                    <label for="moveindate">Estimated Move in Date:</label>
                     <input class="form-control" name="moveindate" class="form-control" type="text" id="moveindate">
                 </div>
                 <div class="form-group">
-                    <label for="">Message:</label>
-                    <textarea class="form-control" name="message" cols="50" rows="5" required></textarea>
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" name="message" id="message" cols="50" rows="5" required></textarea>
                 </div>
                 <input type="submit" class="btn btn-success" name="MM_insert" value="Send Request/Message">
 

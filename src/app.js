@@ -5,12 +5,12 @@ const express = require('express')
 const hbs = require('express-handlebars')
 const request = require('postman-request')
 
-const paginateHelper = require('../src/utils/express-handlebars-paginate');
+// const paginateHelper = require('../src/utils/express-handlebars-paginate');
 
 
 
-var hbsPag = hbs.create({ /* config */ });
-hbsPag.handlebars.registerHelper('paginateHelper', paginateHelper.createPagination);
+// var hbsPag = hbs.create({ /* config */ });
+// hbsPag.handlebars.registerHelper('paginateHelper', paginateHelper.createPagination);
 
 require('./db/mongoose')
 
@@ -38,9 +38,9 @@ app.engine('hbs', hbs({
 // handle static pages
 app.use(express.static(publicDir))
 
-// const fonts = path.join(__dirname, '../node_modules/@fortawesome/fontawesome-free/')
+const fonts = path.join(__dirname, '../node_modules/@fortawesome/fontawesome-free/')
 
-// app.use('/fonts/', express.static(fonts));
+app.use('/fonts/', express.static(fonts));
 
 
 // handle all the rest

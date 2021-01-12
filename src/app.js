@@ -51,9 +51,9 @@ app.engine('hbs', hbs({
 
 // handle static pages
 app.use(express.static(publicDir))
-console.log(__dirname + '/../node_modules/@fortawesome/fontawesome-free/')
+
 // app.use('/css/fontawesome/', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
-app.use('/css/fontawesome/', express.static(__dirname + '../'));
+
 
 // handle all the rest
 app.use(express.json())

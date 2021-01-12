@@ -25,6 +25,8 @@ router.get('/rentals', async (req, res) => {
     // const properties = await Property.find({}).lean()
     const properties = await Property.find({}).lean().limit(limit * 1)
 
+    // TODO: Pagination needs to page from page to page
+
     // get total documents in the properties collection 
     const count = await Property.countDocuments();
 

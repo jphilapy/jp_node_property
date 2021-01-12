@@ -1,4 +1,3 @@
-{{>heading}}
 <div id="container">
 
     <div id="body">
@@ -11,14 +10,14 @@
                 <ul class="list-group">
                     //foreach($errors->all() as $error)
                     <li class="list-group-item text-danger">
-                        // $error 
+                        // $error
                     </li>
                     //endforeach
                 </ul>
             </div>
             //endif
             <form method="post" name="request-info" action="email-request">
-                
+
                 <table width="506" align="center">
                     <tbody>
                         <tr valign="baseline">
@@ -129,7 +128,7 @@
                                     <font size="1" face="Verdana, Arial, Helvetica, sans-serif">Use
                                         format MM/DD/YYYY
                                     </font>
-                                </strong> 
+                                </strong>
                             </td>
                         </tr>
                         <tr valign="baseline">
@@ -150,7 +149,8 @@ BR:
 BA: 
 Rent: 0.00
 Deposit: 0.00
-"></td>
+">
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -159,4 +159,3 @@ Deposit: 0.00
     </div>
 
 </div>
-{{>footer}}

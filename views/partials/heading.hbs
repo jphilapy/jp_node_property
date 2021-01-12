@@ -14,10 +14,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./css/ambassadorpm.css">
+    <link rel="stylesheet" href="/css/ambassadorpm.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="icon" href="/img/icon.png">
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -28,7 +31,7 @@
                     <div id="backgroundImg">
                         <div id="container">
                             <div id="header">
-                                <div id="imageLogo"><a href="index.php"><img src="../images/site/sml_logo.gif"
+                                <div id="imageLogo"><a href="/"><img src="../images/site/sml_logo.gif"
                                             alt="Property Management - Logo" width="395" height="85"></a> </div>
                                 <!--imageLogo div-->
                                 <div id="contactBar">
@@ -46,7 +49,7 @@
                                 <!--contactBar div-->
                             </div>
                             <!--header div-->
-                            <div id="menu">
+                            {{!-- <div id="menu">
                                 <ul>
                                     <li><a href="/">Home Page</a></li>
                                     <li><a href="/about">Property
@@ -58,28 +61,30 @@
                                     <li><a href="/contact">Contact
                                             Us</a></li>
                                 </ul>
-                            </div>
+                            </div> --}}
+
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <a class="navbar-brand" href="#">Navbar</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Features</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Pricing</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
                             <!--menu div-->
-
-                            body
-
-
-                            <div id="footer">
-
-                                <span class="small siteManagement">This site is managed, designed and developed by
-                                    {{ author }}.
-                                    <a href="http://altahost.com/code/contact_main.php" target="_blank">Contact Jeff
-                                        Philapy</a> - <a href="http://www.altahost.com/"
-                                        target="_blank">http://www.altahost.com</a></span>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-
-                </main>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>

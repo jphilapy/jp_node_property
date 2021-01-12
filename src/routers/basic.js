@@ -20,14 +20,32 @@ router.get('/about', (req, res) => {
 })
 
 router.get('/rentals', async (req, res) => {
+    const { page = 1, limit = 10 } = req.query;
 
-    const properties = await Property.find({}).lean()
+    // const properties = await Property.find({}).lean()
+    const properties = await Property.find({}).lean().limit(limit * 1)
 
+    // get total documents in the properties collection 
+    const count = await Property.countDocuments();
+
+    // res.render('rentals', {
+    //     title: 'Rentals',
+    //     layout: 'default',
+    //     properties,
+    //     totalPages: Math.ceil(count / limit),
+    //     currentPage: page
+    // })
     res.render('rentals', {
         title: 'Rentals',
         layout: 'default',
-        properties
+        properties,
+        pagination: {
+            page: page,
+            limit: limit,
+            totalRows: count
+        }
     })
+
 })
 router.get('/property/:_id', async (req, res) => {
 

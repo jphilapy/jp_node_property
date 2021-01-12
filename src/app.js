@@ -38,9 +38,9 @@ app.engine('hbs', hbs({
 // handle static pages
 app.use(express.static(publicDir))
 
-const fonts = path.join(__dirname, '../node_modules/@fortawesome/fontawesome-free/')
+// const fonts = path.join(__dirname, '../node_modules/@fortawesome/fontawesome-free/')
 
-app.use('/fonts/', express.static(fonts));
+// app.use('/fonts/', express.static(fonts));
 
 
 // handle all the rest

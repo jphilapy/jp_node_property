@@ -24,12 +24,6 @@ const configRouter = require('./routers/config')
 
 const publicDir = path.join(__dirname, '../public')
 
-
-// const viewsPath = path.join(__dirname, '../templates/views')
-// const partialsPath = path.join(__dirname, '../templates/partials')
-
-
-
 const app = express()
 app.set('view engine', 'hbs') // setup handlebars templating system
 
@@ -41,18 +35,12 @@ app.engine('hbs', hbs({
 }));
 
 
-
-// app.set('view engine', 'hbs') // setup handlebars templating system
-// app.set('views', viewsPath) // set where templates are
-// hbs.registerPartials(partialsPath) // register partials
-
-
-
-
 // handle static pages
 app.use(express.static(publicDir))
 
-// app.use('/css/fontawesome/', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
+const fonts = path.join(__dirname, '../node_modules/@fortawesome/fontawesome-free/')
+
+app.use('/fonts/', express.static(fonts));
 
 
 // handle all the rest

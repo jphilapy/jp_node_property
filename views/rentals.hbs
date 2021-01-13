@@ -1,108 +1,64 @@
 <div id="container">
 
     <div id="body">
-
-
         <div id="temporaryFormat">
-            <table border="0" width="50%" align="center">
-                <tbody>
-                    <tr>
-                        <td width="23%" align="center"></td>
-                        <td width="31%" align="center"></td>
-                        <td width="23%" align="center"></td>
-                        <td width="23%" align="center"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                    <tr>
-                        <td bgcolor="#FFFFCC"><strong>
-                                <font size="2" face="Arial, Helvetica, sans-serif">Help on the Abbreviations</font>
-                            </strong> </td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#FFFFCC">
-                            <font size="1" face="Verdana, Arial, Helvetica, sans-serif">H=House, D=Duplex, C=Condo,
-                                T=Townhouse,
-                                A= Apartment, M=Mobile Home, S=Studio, G=1 Car Garage, CP=Carport, W/T(Water &amp;
-                                Trash Paid),
-                                Gar=Gardener Paid, A/C=Air Conditioning, U=Upstairs, Dwn=downstairs, W=Washer,
-                                Dr=Dryer,
-                                F=Refrigerator, DW=Dish Washer, FP=Fireplace, Pet=Pet On Approval, S.F=Square Feet,
-                                b.c=Basic Cable,
-                                CmPl=Community Pool, Gated=Community Gated </font>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                    <tr>
-                        <td width="62%"><span class="style7">Records 1 to 11 of 11</span> </td>
-                        <td width="38%" align="right" nowrap=""><img src="images/printer.gif" width="20" height="20"
-                                border="0" align="middle"> <a href="javascript:;"><strong>
-                                    <font size="2" face="Arial, Helvetica, sans-serif"
-                                        onclick="MM_openBrWindow(&#39;/modules/prop_listings/proplst_prntble.php&#39;,&#39;printableRentals&#39;,&#39;toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,width=800,height=600&#39;)">
-                                        Click here for a printable version of this page. </font>
-                                </strong></a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tbody>
-                    <tr align="center" class="tableHeader">
-                        <td width="15%" class="tableFormat_topleft">VACANT</td>
-                        <td width="17%" class="tableFormat_topcenter">ADDRESS</td>
-                        <td width="13%" class="tableFormat_topcenter">CITY</td>
-                        <td width="14%" class="tableFormat_topcenter">BR</td>
-                        <td width="14%" class="tableFormat_topcenter">BA</td>
-                        <td width="14%" class="tableFormat_topcenter">RENT</td>
-                        <td width="13%" class="tableFormat_topcenter">DEP</td>
-                        <td width="13%" class="tableFormat_topright">&nbsp;</td>
-                    </tr>
-                    {{#each properties}}
-                    <tr align="center" bgcolor="#eeeeee" onmouseover="" onmouseout="">
 
-                        <td class="style10">{{this.availability}}</td>
-                        <td class="style10">{{this.address}}</td>
-                        <td class="style10"> {{this.city}}</td>
-                        <td class="style10">{{this.bdrm}}</td>
-                        <td class="style10">{{this.bath}}</td>
-                        <td class="style10"> {{this.rent}} </td>
-                        <td class="style10"> {{this.deposit}} </td>
-                        <td nowrap=""><a href="index.php?pg=request_prop&amp;pid=4" class="style10">Contact Us<br>
-                                regarding this property. </a>
-                            <hr>
-                            <a href="/property/{{this._id}}">View Property</a>
+            <div class="row border py-3">
+                <div class="col-9">
+                    Records # to # of #
+                </div>
+                <div class="col-3 d-flex justify-content-end flex-nowrap align-items-center">
+                    <i class="fas fa-print mr-2"></i> &nbsp;<a href="javascript:;" onclick="window.print()">Print this
+                        page.</a>
+                </div>
+            </div>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">VACANT</th>
+                        <th scope="col">ADDRESS</th>
+                        <th scope="col">CITY</th>
+                        <th scope="col">BR</th>
+                        <th scope="col">BA</th>
+                        <th scope="col">RENT</th>
+                        <th scope="col">DEP</th>
+                        <th scope="col">&nbsp;</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {{#each properties}}
+                    <tr>
+
+                        <td scope="row">{{this.availability}}</td>
+                        <td>{{this.address}}</td>
+                        <td> {{this.city}}</td>
+                        <td>{{this.bdrm}}</td>
+                        <td>{{this.bath}}</td>
+                        <td> {{this.rent}} </td>
+                        <td> {{this.deposit}} </td>
+                        <td><a href="/request"><i class="far fa-envelope-open"></i></a> <a
+                                href="/property/{{this._id}}"><i class="fas fa-search"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">
+
+                            <span>REMARKS:</span>
+                            <p>{{this.remarks}}</p>
                         </td>
                     </tr>
-                    <tr>
-                        <td bgcolor="#FFFFFF" colspan="8"><span class="style7">REMARKS:</span> <span class="style10">
-                                {{this.remarks}}</span></td>
-                    </tr>
-                    <tr>
-                        <td bgcolor="#EEEEEE" colspan="8"><span class="style10">
-                                <hr>
-                            </span></td>
-                    </tr>
+
 
                     {{/each}}
+
                 </tbody>
             </table>
 
-            <table border="0" width="50%" align="center">
-                <tbody>
-                    <tr>
-                        <td width="23%" align="center"></td>
-                        <td width="31%" align="center"></td>
-                        <td width="23%" align="center"></td>
-                        <td width="23%" align="center"></td>
-                    </tr>
-                </tbody>
-            </table>
-            {{{paginateHelper pagination}}}
+            <div class="d-flex justify-content-center">
+                {{{paginateHelper pagination}}}
+            </div>
         </div>
     </div>
 </div>

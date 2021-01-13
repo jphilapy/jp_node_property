@@ -45,13 +45,6 @@ body {
     background-image: url(../images/site/horz_rule.gif);
     background-repeat: repeat-x;
     background-position: top;
-
-    /*    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    height: 26px;
-    clear: both;
-*/
 }
 
 #backgroundImg #container #menu ul {
@@ -278,4 +271,24 @@ body {
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 5px;
+}
+
+
+/** NEW **/
+a.reset-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a.reset-link:hover {
+    color: #000;
+}
+
+a.reset-link:visited {
+    color: #000;
+}
+
+a.reset-link:active {
+    color: #000;
 }

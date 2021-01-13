@@ -9,8 +9,8 @@ const paginateHelper = require('../src/utils/ehbs');
 
 
 
-// var hbsPag = hbs.create({ /* config */ });
-// hbsPag.handlebars.registerHelper('paginateHelper', paginateHelper.createPagination);
+var hbsPag = hbs.create({ /* config */ });
+hbsPag.handlebars.registerHelper('paginateHelper', paginateHelper.createPagination);
 
 require('./db/mongoose')
 

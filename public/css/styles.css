@@ -1,54 +1,281 @@
+/** AMBASSADORPM **/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
-    color: #333333;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    background-color: #8B3A30 !important;
+
+}
+
+#backgroundImg {
+    background-image: url(../images/background.gif);
+    background-repeat: repeat-y;
+    margin-left: auto;
+    margin-right: auto;
+    width: 839px;
+    margin-bottom: auto;
+    clear: both;
+}
+
+#backgroundImg #container {
+    width: 825px;
+    margin-bottom: auto;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#backgroundImg #container #header {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    clear: both;
+}
+
+#backgroundImg #container #menu {
+    background-color: #8B3A30;
+    background-image: url(../images/site/horz_rule.gif);
+    background-repeat: repeat-x;
+    background-position: top;
+
+    /*    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 26px;
+    clear: both;
+*/
+}
+
+#backgroundImg #container #menu ul {
+    list-style: none;
+    list-style-position: inside;
+    /*    width: 100%;*/
+    text-align: center;
+    padding-top: 4px;
+    /*Set space above menu font but below top of background*/
+    padding-bottom: 4px;
+    /*Set space below menu font but above top of background*/
+}
+
+#backgroundImg #container #menu li {
+    display: inline;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#backgroundImg #container #menu a:link {
+    color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.main-content {
-    flex-grow: 1;
-}
-
-footer {
-    color: #888888;
-    border-top: 1px solid #EEEEEE;
-    margin-top: 16px;
-    padding: 16px 0;
-}
-
-header {
-    margin-top: 16px;
-    margin-bottom: 48px;
-}
-
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
-}
-
-header a {
-    color: #888888;
-    margin-right: 16px;
+    font-size: 12px;
     text-decoration: none;
 }
 
-,portrait {
-    width: 250px;
+#backgroundImg #container #menu a:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
 }
 
-input {
-border: solid 1px #cccccc;
-padding: 8px;
+#backgroundImg #container #menu a:active {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
-button {
-    cursor:pointer;
-    border: solid 1px #888888;
-    background: #888888;
-    color: white;
-    padding: 8px;
+#backgroundImg #container #menu a:visited {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#backgroundImg #container #header #imageLogo {
+    height: 85px;
+    width: 395px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 25px;
+}
+
+#backgroundImg #container #body {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    clear: both;
+    margin-bottom: auto;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    text-align: left;
+}
+
+#backgroundImg #container footer {
+    clear: both;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    background-image: url(../images/site/horz_rule.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+    margin-bottom: auto;
+    padding-top: 20px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#backgroundImg #container #header #contactBar {
+    clear: both;
+    margin-top: 18px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 20px;
+}
+
+.contactTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.contactText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+
+#backgroundImg #container #header #contactBar #contactRight {
+    float: right;
+    width: 200px;
+}
+
+#backgroundImg #container #header #contactBar #contactLeft {
+    float: left;
+    width: 200px;
+}
+
+.horzList {
+    list-style: none;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.horzList li {
+    display: inline;
+}
+
+.horzListMiddleDivider {
+    background-image: url(../images/bullet1.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.horzListLeftEnd {
+    background-image: url(../images/bullet1.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.horzListRightEnd {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.openingPageText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.mainPagePromptLinks {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.mainPagePromptDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    display: block;
+    width: 350px;
+}
+
+.aboutPersonDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    float: left;
+    margin-top: 2px;
+    line-height: 1.5em;
+    text-align: justify;
+    margin-right: 4px;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    width: 600px;
+}
+
+#temporaryFormat {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#temporaryFormat ul {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#temporaryFormat p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#temporaryFormat h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }

@@ -5,7 +5,7 @@ const express = require('express')
 const hbs = require('express-handlebars')
 const request = require('postman-request')
 
-// const paginateHelper = require('../src/utils/express-handlebars-paginate');
+const paginateHelper = require('../src/utils/express-handlebars-paginate');
 
 
 

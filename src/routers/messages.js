@@ -21,7 +21,8 @@ router.post('/request', async (req, res) => {
             layout: 'default',
             title: 'Request Info',
             name: 'Jeff Philapy',
-            errors: e
+            myErrors: e
+            //JSON.stringify(e)
         })
     }
 })

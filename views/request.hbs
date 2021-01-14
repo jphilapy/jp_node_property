@@ -1,7 +1,7 @@
 <div class="container">
 
     <div id="body">
-        {{errors.ValidatorError}}
+        {{myErrors}}
         <div id="temporaryFormat">
             <br>
             <div class="card">
@@ -12,8 +12,12 @@
                             {{!-- foreach($errors->all() as $error) --}}
                             <li class="list-group-item text-danger">
                                 {{!-- $error --}}
-                                {{#each errors}}
-                                {{this}}<br>
+
+
+                                {{#each myErrors}}
+
+                                {{errors}}<br>
+
                                 {{/each}}
                             </li>
                             {{!-- //endforeach --}}

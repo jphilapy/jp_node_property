@@ -1,0 +1,32 @@
+{
+  "errors": {
+    "moveindate": {
+      "name": "ValidatorError",
+      "message": "Missing move in date.",
+      "properties": {
+        "message": "Missing move in date.",
+        "type": "required",
+        "path": "moveindate",
+        "value": ""
+      },
+      "kind": "required",
+      "path": "moveindate",
+      "value": ""
+    },
+    "message": {
+      "name": "ValidatorError",
+      "message": "Message is required.",
+      "properties": {
+        "message": "Message is required.",
+        "type": "required",
+        "path": "message",
+        "value": ""
+      },
+      "kind": "required",
+      "path": "message",
+      "value": ""
+    }
+  },
+  "_message": "Message validation failed",
+  "message": "Message validation failed: moveindate: Missing move in date., message: Message is required."
+}

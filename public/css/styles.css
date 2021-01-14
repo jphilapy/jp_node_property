@@ -292,3 +292,31 @@ a.reset-link:visited {
 a.reset-link:active {
     color: #000;
 }
+
+a.reset-link.diff-color:hover {
+    color: #8B3A30
+}
+
+.overlay {
+
+    padding: 12px 12px 0 12px;
+    margin-left: 8px;
+    border: solid 1px #fff;
+}
+
+.overlay:hover {
+    opacity: .7;
+    border: solid 1px #eee;
+    background-color: #EEE;
+    padding: 12px 12px 0 12px;
+    margin-left: 8px;
+}
+
+.overlay h3 {
+    font-size: 18px;
+}
+
+a.reset-link:hover h3 {
+    color: #8B3A30;
+
+}

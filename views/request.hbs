@@ -1,10 +1,11 @@
 <div class="container">
 
     <div id="body">
-        {{myErrors}}
+
         <div id="temporaryFormat">
             <br>
             <div class="card">
+
                 <div class="card-body">
                     {{!-- //if($errors->any()) --}}
                     <div class="alert alert-danger">
@@ -16,7 +17,7 @@
 
                                 {{#each myErrors}}
 
-                                {{errors}}<br>
+                                Error: {{this}}<br>
 
                                 {{/each}}
                             </li>

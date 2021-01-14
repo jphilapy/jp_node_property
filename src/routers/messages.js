@@ -15,13 +15,13 @@ router.post('/request', async (req, res) => {
             message: "Succesful Submission"
         })
     } catch (e) {
-        console.log(e)
+        console.log(e.errors)
 
         res.render('request', {
             layout: 'default',
             title: 'Request Info',
             name: 'Jeff Philapy',
-            myErrors: e
+            myErrors: e.errors
             //JSON.stringify(e)
         })
     }

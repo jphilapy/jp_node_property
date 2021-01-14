@@ -1,19 +1,31 @@
 const express = require('express')
 const Message = require('../models/message')
-const auth = require('../middleware/auth')
+// const auth = require('../middleware/auth')
 const router = new express.Router()
 
 // Message creation endpoint
-router.post('/contact', async (req, res) => {
-    const message = new Message(req.body)
-
+router.post('/request', async (req, res) => {
+    const message = new Message({ ...req.body })
     try {
         await message.save()
-        res.status(201).send(message)
+        res.status(201).render('request', {
+            layout: 'default',
+            title: 'Request Info',
+            name: 'Jeff Philapy',
+            message: "Succesful Submission"
+        })
     } catch (e) {
-        // res.status(400).send(e)
-        res.status(400).send('Validation error')
+        console.log(e)
+
+        res.render('request', {
+            layout: 'default',
+            title: 'Request Info',
+            name: 'Jeff Philapy',
+            errors: e
+        })
     }
 })
 
 module.exports = router
+
+

@@ -1,5 +1,4 @@
 /** SETUP */
-
 const path = require('path')
 const express = require('express')
 const hbs = require('express-handlebars')
@@ -41,7 +40,7 @@ app.use(express.static(publicDir))
 const fonts = path.join(__dirname, '../node_modules/@fortawesome/fontawesome-free/')
 
 app.use('/fonts/', express.static(fonts));
-
+app.use(express.urlencoded({ extended: true }))
 
 // handle all the rest
 app.use(express.json())

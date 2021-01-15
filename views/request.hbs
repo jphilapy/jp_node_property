@@ -3,67 +3,22 @@
     <div id="body">
 
         <div id="temporaryFormat">
-            <br>
-            <div class="card">
-
-                <div class="card-body">
-                    {{!-- //if($errors->any()) --}}
-                    <div class="alert alert-danger">
-                        <ul class="list-group">
-                            {{!-- foreach($errors->all() as $error) --}}
-                            <li class="list-group-item text-danger">
-                                {{!-- $error --}}
 
 
-                                {{#each status}}
+            {{#if error}}
 
-                                {{this}}<br>
-
-                                {{/each}}
-                            </li>
-                            {{!-- //endforeach --}}
-                        </ul>
-                    </div>
-                    {{!-- //endif --}}
-                </div>
+            <div class="alert alert-danger mt-3">
+                <ul class="list-group">
+                    {{#each error}}
+                    <li class="list-group-item text-danger">
+                        {{this}}
+                    </li>
+                    {{/each}}
+                </ul>
             </div>
+            {{/if}}
 
-            <div class="card">
-                <div class="card-body">
-                    <strong>READ BEFORE CONTACTING US:</strong>
-
-                    <ul>
-                        <li>
-                            30$ cash applicant fee per
-                            applicant (covers
-                            credit check and processing)
-                        </li>
-                        <li>
-                            Copy of drivers license
-
-                        </li>
-                        <li>
-                            Last two pay stubs if
-                            employed
-                        </li>
-                        <li>
-                            If self-employed, we need the
-                            last two
-                            consecutive bank statements (summary page showing deposits).
-                        </li>
-                        <li>
-                            If prospective tenant had a
-                            bankruptcy we
-                            need it to be discharged.
-                        </li>
-                        <li>
-                            If military, copy of LES is
-                            required.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <form id="myform" method="post" class="needs-validation mb-3" action="/request" novalidate>
+            <form id="myform" method="post" class="needs-validation mb-3 mt-3" action="/request" novalidate>
 
                 <p>If you are
                     requesting
@@ -73,19 +28,23 @@
                     you wish to know more about.</p>
 
                 <div class="form-group mb-3">
-                    <label for="name" class="form-label">Full Name</label>
+                    <label for="name" class="form-label">Full
+                        Name</label>
 
-                    <input type="text" class="form-control" name="name" id="name" size="32" required>
+                    <input type="text" class="form-control" name="name" id="name" size="32"
+                        value="{{#if request}}{{request.name}}{{/if}}" required>
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="email">Email Address:</label>
 
-                    <input type="email" class="form-control" name="email" id="email" size="32" required>
+                    <input type="email" class="form-control" name="email" id="email" size="32"
+                        value="{{#if request}}{{request.email}}{{/if}}" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="phone">Phone #:</label>
-                    <input type="tel" class="form-control" name="phone" id="phone" size="32">
+                    <input type="tel" class="form-control" name="phone" id="phone" size="32"
+                        value="{{#if request}}{{request.phone}}{{/if}}">
                 </div>
 
                 <div class="form-group mb-3">
@@ -125,11 +84,13 @@
                 </div>
                 <div class="form-group mb-3">
                     <label for="moveindate">Estimated Move in Date:</label>
-                    <input class="form-control" name="moveindate" type="text" id="moveindate">
+                    <input class="form-control" name="moveindate" type="text" id="moveindate"
+                        value="{{#if request}}{{request.moveindate}}{{/if}}">
                 </div>
                 <div class="form-group mb-3">
                     <label for="message">Message:</label>
-                    <textarea class="form-control" name="message" id="message" cols="50" rows="5"></textarea>
+                    <textarea class="form-control" name="message" id="message" cols="50"
+                        rows="5">{{#if request}}{{request.message}}{{/if}}</textarea>
                 </div>
                 <button type="submit" class="btn btn-success">Send Request/Message</button>
             </form>

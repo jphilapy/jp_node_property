@@ -9,7 +9,7 @@ router.post('/request', async (req, res) => {
     const message = new Message({ ...req.body })
     try {
         await message.save()
-        res.status(201).render('request', {
+        res.status(201).render('request-success', {
             layout: 'default',
             title: 'Request Info',
             name: 'Jeff Philapy',
@@ -22,7 +22,8 @@ router.post('/request', async (req, res) => {
             layout: 'default',
             title: 'Request Info',
             name: 'Jeff Philapy',
-            status: e.errors
+            error: e.errors,
+            request: req.body
             //JSON.stringify(e)
         })
     }

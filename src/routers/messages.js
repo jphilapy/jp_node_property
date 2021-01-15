@@ -1,3 +1,4 @@
+const { json } = require('express')
 const express = require('express')
 const Message = require('../models/message')
 // const auth = require('../middleware/auth')
@@ -12,7 +13,7 @@ router.post('/request', async (req, res) => {
             layout: 'default',
             title: 'Request Info',
             name: 'Jeff Philapy',
-            message: "Succesful Submission"
+            status: { message: 'Succesful Submission' }
         })
     } catch (e) {
         console.log(e.errors)
@@ -21,7 +22,7 @@ router.post('/request', async (req, res) => {
             layout: 'default',
             title: 'Request Info',
             name: 'Jeff Philapy',
-            myErrors: e.errors
+            status: e.errors
             //JSON.stringify(e)
         })
     }
